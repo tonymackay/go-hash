@@ -5,15 +5,27 @@
 Clone the repo then run the following commands:
 
 ```
-clone https://github.com/tonymackay/go-hash.git
+git clone https://github.com/tonymackay/go-hash.git
 cd go-hash
-go build
+go build -o go-hash
+go install
 ```
 
 ## Using
 
+
 ```
-go-hash -password YOURPASSWORD -cost 10
+Usage: go-hash [OPTIONS]
+
+Options:
+  -cost int
+        Cost between 4 and 31 (default 10)
+  -password string
+        Password to hash
+
+Examples:
+  go-hash -password mypassword
+  go-hash -password "hello world" -cost 20
 ```
 
 ## License
